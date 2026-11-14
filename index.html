@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The History of 2009scape.org (60s Documentary)</title>
+  <style>
+    :root { color-scheme: dark; --bg: #0b0e15; --card: #131823; --gold: #f4bd4c; --text: #f5f2ea; --muted: #a6b0c3; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 18px 14px 40px;
+      background: radial-gradient(circle at top, #171e2d 0%, var(--bg) 70%);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .wrap { max-width: 960px; margin: 0 auto; }
+    .kicker { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: var(--gold); text-transform: uppercase; margin-bottom: 4px; }
+    h1 { margin: 0 0 14px; font-size: 22px; line-height: 1.25; }
+    .player-shell {
+      background: #000; border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 14px; overflow: hidden; box-shadow: 0 18px 44px rgba(0,0,0,0.55);
+    }
+    video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+    .bar {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 10px; padding: 12px 14px; background: #0e131d; border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .meta { font-size: 12px; color: var(--muted); }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 46px; padding: 11px 18px; border-radius: 10px; font-size: 14px; font-weight: 600;
+      text-decoration: none; cursor: pointer; border: 1px solid rgba(244,189,76,0.35);
+      background: var(--card); color: var(--text);
+    }
+    .btn-primary { background: linear-gradient(135deg, #f4bd4c, #d99526); color: #11151e; border: none; }
+    .chapters { margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+    .chap-btn {
+      text-align: left; padding: 12px; border-radius: 10px; background: var(--card);
+      border: 1px solid rgba(255,255,255,0.08); color: var(--text); cursor: pointer;
+    }
+    .chap-btn.active { border-color: var(--gold); background: #1a2130; }
+    .chap-top { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    .chap-time { font-family: ui-monospace, monospace; font-size: 12px; padding: 2px 6px; border-radius: 4px; background: rgba(244,189,76,0.16); color: var(--gold); }
+    .chap-badge { font-size: 11px; font-weight: 700; color: var(--muted); }
+    .chap-meta { font-size: 13px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="kicker">60-Second Documentary · 1080p HD</div>
+    <h1>The History of 2009scape.org</h1>
+
+    <div class="player-shell">
+      <video id="vid" controls playsinline preload="metadata" poster="poster.jpg">
+        <source src="2009scape_history_60s.mp4" type="video/mp4" />
+      </video>
+      <div class="bar">
+        <span class="meta">2009 → Arios → Kratos 530 → 2009scape.org (AGPL-3.0) → 2026</span>
+        <span class="meta">1920×1080 · 30 fps · H.264 / AAC</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="2009scape_history_60s.mp4" download="2009scape_history_60s.mp4">Download MP4 (34 MB)</a>
+      <a class="btn" href="https://raw.githubusercontent.com/MrLeefy/2009scape-history-video/main/2009scape_history_60s.mp4" download="2009scape_history_60s.mp4">Direct Raw MP4</a>
+    </div>
+
+    <div class="chapters">
+      <button class="chap-btn" onclick="seekTo(0.00)"><div class="chap-top"><span class="chap-time">0:00</span><span class="chap-badge">CHAPTER I · THE FORGOTTEN ERA</span></div><div class="chap-meta">JAN 2009 · BUILD 530</div></button><button class="chap-btn" onclick="seekTo(7.40)"><div class="chap-top"><span class="chap-time">0:07</span><span class="chap-badge">CHAPTER II · CLOSED ORIGINS</span></div><div class="chap-meta">ARIOS498 → ARIOS530 (BUILD 530)</div></button><button class="chap-btn" onclick="seekTo(12.56)"><div class="chap-top"><span class="chap-time">0:12</span><span class="chap-badge">CHAPTER III · FROM THE ASHES</span></div><div class="chap-meta">2015 · KRATOS 530</div></button><button class="chap-btn" onclick="seekTo(18.27)"><div class="chap-top"><span class="chap-time">0:18</span><span class="chap-badge">CHAPTER IV · OPEN PRESERVATION</span></div><div class="chap-meta">2019 · AGPL-3.0 · NON-PROFIT</div></button><button class="chap-btn" onclick="seekTo(25.43)"><div class="chap-top"><span class="chap-time">0:25</span><span class="chap-badge">CHAPTER V · PLAY ANYWHERE</span></div><div class="chap-meta">JUL 2020 · OFFLINE SINGLEPLAYER</div></button><button class="chap-btn" onclick="seekTo(32.06)"><div class="chap-top"><span class="chap-time">0:32</span><span class="chap-badge">CHAPTER VI · COMMUNITY FORGE</span></div><div class="chap-meta">GITLAB · KOTLIN · TUTORIAL ISLAND</div></button><button class="chap-btn" onclick="seekTo(37.71)"><div class="chap-top"><span class="chap-time">0:37</span><span class="chap-badge">CHAPTER VII · LIVING WORLDS</span></div><div class="chap-meta">SARADOMIN LAUNCHER · BOTS</div></button><button class="chap-btn" onclick="seekTo(44.17)"><div class="chap-top"><span class="chap-time">0:44</span><span class="chap-badge">CHAPTER VIII · AUTHENTIC CLIENT</span></div><div class="chap-meta">2023 · RT4 CLIENT · FLATHUB</div></button><button class="chap-btn" onclick="seekTo(50.86)"><div class="chap-top"><span class="chap-time">0:50</span><span class="chap-badge">CHAPTER IX · ENDURING LEGACY</span></div><div class="chap-meta">2026 · 2009SCAPE.ORG</div></button>
+    </div>
+  </div>
+  <script>
+    const vid = document.getElementById("vid");
+    const btns = Array.from(document.querySelectorAll(".chap-btn"));
+    const chapters = [{"start": 0.0, "badge": "CHAPTER I \u00b7 THE FORGOTTEN ERA", "meta": "JAN 2009 \u00b7 BUILD 530"}, {"start": 7.401, "badge": "CHAPTER II \u00b7 CLOSED ORIGINS", "meta": "ARIOS498 \u2192 ARIOS530 (BUILD 530)"}, {"start": 12.558, "badge": "CHAPTER III \u00b7 FROM THE ASHES", "meta": "2015 \u00b7 KRATOS 530"}, {"start": 18.272, "badge": "CHAPTER IV \u00b7 OPEN PRESERVATION", "meta": "2019 \u00b7 AGPL-3.0 \u00b7 NON-PROFIT"}, {"start": 25.426, "badge": "CHAPTER V \u00b7 PLAY ANYWHERE", "meta": "JUL 2020 \u00b7 OFFLINE SINGLEPLAYER"}, {"start": 32.057, "badge": "CHAPTER VI \u00b7 COMMUNITY FORGE", "meta": "GITLAB \u00b7 KOTLIN \u00b7 TUTORIAL ISLAND"}, {"start": 37.713, "badge": "CHAPTER VII \u00b7 LIVING WORLDS", "meta": "SARADOMIN LAUNCHER \u00b7 BOTS"}, {"start": 44.17, "badge": "CHAPTER VIII \u00b7 AUTHENTIC CLIENT", "meta": "2023 \u00b7 RT4 CLIENT \u00b7 FLATHUB"}, {"start": 50.859, "badge": "CHAPTER IX \u00b7 ENDURING LEGACY", "meta": "2026 \u00b7 2009SCAPE.ORG"}];
+    function seekTo(t) { vid.currentTime = t; vid.play().catch(() => {}); }
+    vid.addEventListener("timeupdate", () => {
+      const cur = vid.currentTime;
+      let idx = 0;
+      for (let i = 0; i < chapters.length; i++) if (cur >= chapters[i].start) idx = i;
+      btns.forEach((b, k) => b.classList.toggle("active", k === idx));
+    });
+  </script>
+</body>
+</html>
