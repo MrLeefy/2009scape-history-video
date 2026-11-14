@@ -1,2 +1,15 @@
-# 2009scape-history-video
-60-second documentary video covering the history of 2009scape.org
+# The History of 2009scape.org (60s Documentary)
+
+- **Watch / Download MP4 (1080p, 34 MB):** [2009scape_history_60s.mp4](https://github.com/MrLeefy/2009scape-history-video/blob/main/2009scape_history_60s.mp4)
+- **Direct Raw Download:** [Download 2009scape_history_60s.mp4](https://github.com/MrLeefy/2009scape-history-video/raw/refs/heads/main/2009scape_history_60s.mp4)
+
+### Chapters (1:00 Runtime)
+1. **0:00** — *Chapter I · The Forgotten Era* (`Jan 2009 · Build 530`)
+2. **0:07** — *Chapter II · Closed Origins* (`Arios498 → Arios530`)
+3. **0:13** — *Chapter III · From the Ashes* (`2015 · Kratos 530`)
+4. **0:18** — *Chapter IV · Open Preservation* (`2019 · AGPL-3.0 · Non-Profit`)
+5. **0:25** — *Chapter V · Play Anywhere* (`Jul 2020 · Offline Singleplayer`)
+6. **0:32** — *Chapter VI · Community Forge* (`GitLab · Kotlin · Tutorial Island`)
+7. **0:38** — *Chapter VII · Living Worlds* (`Saradomin Launcher · Bots`)
+8. **0:44** — *Chapter VIII · Authentic Client* (`2023 · RT4 Client · Flathub`)
+9. **0:51** — *Chapter IX · Enduring Legacy* (`2026 · 2009scape.org`)
